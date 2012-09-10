@@ -1,0 +1,36 @@
+Blocks:
+  Grass:
+    ID: 2
+    Data: -1
+    Break_Value: 1
+    Place_Value: -1
+  Dirt:
+    ID: 3
+    Data: -1
+    Break_Value: 1
+    Place_Value: -1
+  Farmland:
+    ID: 60
+    Data: -1
+    Break_Value: 1
+    Place_Value: -1
+  Sand:
+    ID: 12
+    Data: -1
+    Break_Value: 1
+    Place_Value: -1
+  Gravel:
+    ID: 13
+    Data: -1
+    Break_Value: 1
+    Place_Value: -1
+  Clay:
+    ID: 82
+    Data: -1
+    Break_Value: 1
+    Place_Value: -1
+  Soul_Sand:
+    ID: 88
+    Data: -1
+    Break_Value: 1
+    Place_Value: -1

@@ -1,0 +1,30 @@
+mcMMO:
+  BlockBreak:
+    Mining:
+      Level_Bonus_Before_Divide: 1
+      Divid_Level_by: 100
+    Woodcutting:
+      Level_Bonus_Before_Divide: 1
+      Divid_Level_by: 100
+    Excavation:
+      Level_Bonus_Before_Divide: 1
+      Divid_Level_by: 100
+    Herbalism:
+      Level_Bonus_Before_Divide: 1
+      Divid_Level_by: 100
+  BlockPlace:
+    Mining:
+      Level_Bonus_Before_Divide: 1
+      Divid_Level_by: 100
+    Woodcutting:
+      Level_Bonus_Before_Divide: 1
+      Divid_Level_by: 100
+    Excavation:
+      Level_Bonus_Before_Divide: 1
+      Divid_Level_by: 100
+    Herbalism:
+      Level_Bonus_Before_Divide: 1
+      Divid_Level_by: 100
+EconomyThread:
+  Init_Wait_Time: 1200
+  Repeat_Every: 300

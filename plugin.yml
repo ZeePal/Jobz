@@ -1,0 +1,5 @@
+name: Jobz
+main: net.ZeePal.bukkit.Jobz.Jobz
+version: 0.1
+author: ZeePal
+depend: [Vault, mcMMO]

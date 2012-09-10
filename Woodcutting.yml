@@ -1,0 +1,16 @@
+Blocks:
+  Wood:
+    ID: 17
+    Data: -1
+    Break_Value: 3
+    Place_Value: -3
+  IC_Rubberwood:
+    ID: 243
+    Data: -1
+    Break_Value: 3
+    Place_Value: -3
+  RP_Rubberwood:
+    ID: 143
+    Data: -1
+    Break_Value: 3
+    Place_Value: -3

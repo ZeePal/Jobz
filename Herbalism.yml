@@ -1,0 +1,81 @@
+Blocks:
+  Dandelion:
+    ID: 37
+    Data: -1
+    Break_Value: 2
+    Place_Value: -2
+  Rose:
+    ID: 38
+    Data: -1
+    Break_Value: 2
+    Place_Value: -2
+  Brown_Mushroom:
+    ID: 39
+    Data: -1
+    Break_Value: 2
+    Place_Value: -2
+  Red_Mushroom:
+    ID: 40
+    Data: -1
+    Break_Value: 2
+    Place_Value: -2
+  Tall_Grass:
+    ID: 31
+    Data: 1
+    Break_Value: 0.1
+    Place_Value: -0.1
+  Fern:
+    ID: 32
+    Data: 2
+    Break_Value: 0.1
+    Place_Value: -0.1
+  Dead_Bush:
+    ID: 32
+    Data: -1
+    Break_Value: 0.1
+    Place_Value: -0.1
+  Cactus:
+    ID: 81
+    Data: -1
+    Break_Value: 3
+    Place_Value: -3
+  Sugar_Cane:
+    ID: 83
+    Data: -1
+    Break_Value: 3
+    Place_Value: -3
+  Wheat:
+    ID: 59
+    Data: -1
+    Break_Value: 2
+    Place_Value: -2
+  Melon:
+    ID: 103
+    Data: -1
+    Break_Value: 4
+    Place_Value: -4
+  Pumpkin:
+    ID: 86
+    Data: -1
+    Break_Value: 10
+    Place_Value: -10
+  Nether_Wart:
+    ID: 115
+    Data: -1
+    Break_Value: 20
+    Place_Value: -20
+  Lily_Pad:
+    ID: 111
+    Data: -1
+    Break_Value: 5
+    Place_Value: -5
+  Vines:
+    ID: 106
+    Data: -1
+    Break_Value: 4
+    Place_Value: -4
+  Indigo_Flower:
+    ID: 139
+    Data: 0
+    Break_Value: 2
+    Place_Value: -2

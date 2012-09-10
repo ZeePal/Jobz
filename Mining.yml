@@ -1,0 +1,166 @@
+Blocks:
+  Stone:
+    ID: 1
+    Data: -1
+    Break_Value: 1
+    Place_Value: -1
+  Sandstone:
+    ID: 24
+    Data: -1
+    Break_Value: 1
+    Place_Value: -1
+  Netherrack:
+    ID: 87
+    Data: -1
+    Break_Value: 0.5
+    Place_Value: -0.5
+  Endstone:
+    ID: 121
+    Data: -1
+    Break_Value: 1
+    Place_Value: -1
+  Coal:
+    ID: 16
+    Data: -1
+    Break_Value: 2
+    Place_Value: -2
+  Iron:
+    ID: 15
+    Data: -1
+    Break_Value: 4
+    Place_Value: -4
+  Gold:
+    ID: 14
+    Data: -1
+    Break_Value: 4
+    Place_Value: -4
+  Redstone:
+    ID: 73
+    Data: -1
+    Break_Value: 3
+    Place_Value: -3
+  Lapis_Lazuli:
+    ID: 21
+    Data: -1
+    Break_Value: 10
+    Place_Value: -10
+  Diamond:
+    ID: 56
+    Data: -1
+    Break_Value: 20
+    Place_Value: -20
+  Obsidian:
+    ID: 49
+    Data: -1
+    Break_Value: 6
+    Place_Value: -6
+  Glowstone:
+    ID: 89
+    Data: -1
+    Break_Value: 5
+    Place_Value: -5
+  Nether_Coal:
+    ID: 135
+    Data: 0
+    Break_Value: 4
+    Place_Value: -1
+  Nether_Diamond:
+    ID: 135
+    Data: 1
+    Break_Value: 40
+    Place_Value: -40
+  Nether_Gold:
+    ID: 135
+    Data: 2
+    Break_Value: 8
+    Place_Value: -8
+  Nether_Iron:
+    ID: 135
+    Data: 3
+    Break_Value: 8
+    Place_Value: -8
+  Nether_Lapis_Lazuli:
+    ID: 135
+    Data: 4
+    Break_Value: 20
+    Place_Value: -20
+  Nether_Redstone:
+    ID: 135
+    Data: 5
+    Break_Value: 6
+    Place_Value: -6
+  Nether_Copper:
+    ID: 135
+    Data: 6
+    Break_Value: 5
+    Place_Value: -5
+  Nether_Tin:
+    ID: 135
+    Data: 7
+    Break_Value: 6
+    Place_Value: -6
+  Marble:
+    ID: 142
+    Data: 0
+    Break_Value: 1.5
+    Place_Value: -1.5
+  Basalt:
+    ID: 142
+    Data: 1
+    Break_Value: 1.5
+    Place_Value: -1.5
+  Ruby:
+    ID: 140
+    Data: 0
+    Break_Value: 5
+    Place_Value: -5
+  Emerald:
+    ID: 140
+    Data: 1
+    Break_Value: 5
+    Place_Value: -5
+  Sapphire:
+    ID: 140
+    Data: 2
+    Break_Value: 5
+    Place_Value: -5
+  Silver:
+    ID: 140
+    Data: 3
+    Break_Value: 3
+    Place_Value: -3
+  Tin:
+    ID: 140
+    Data: 4
+    Break_Value: 3
+    Place_Value: -3
+  Tin_2:
+    ID: 248
+    Data: -1
+    Break_Value: 3
+    Place_Value: -3
+  Copper:
+    ID: 140
+    Data: 5
+    Break_Value: 2.5
+    Place_Value: -2.5
+  Copper_2:
+    ID: 249
+    Data: -1
+    Break_Value: 2.5
+    Place_Value: -2.5
+  Tungsten:
+    ID: 140
+    Data: 6
+    Break_Value: 20
+    Place_Value: -20
+  Nikolite:
+    ID: 140
+    Data: 7
+    Break_Value: 3
+    Place_Value: -3
+  Uranium:
+    ID: 247
+    Data: -1
+    Break_Value: 7.5
+    Place_Value: -7.5
