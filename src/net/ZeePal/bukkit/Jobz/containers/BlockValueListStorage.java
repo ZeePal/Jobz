@@ -18,19 +18,12 @@
 
 package net.ZeePal.bukkit.Jobz.containers;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantReadWriteLock;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 
 public class BlockValueListStorage {
 
-	private final ReentrantReadWriteLock readWriteLock = new ReentrantReadWriteLock();
-	private final Lock read  = readWriteLock.readLock();
-	private final Lock write = readWriteLock.writeLock();
-
-	public final List<BlockValue> blockValues = new ArrayList<BlockValue>();
+	public final CopyOnWriteArrayList<BlockValue> blockValues = new CopyOnWriteArrayList<BlockValue>();
 
 	public final short mcMMOMiningLevelBonusAmount;
 	public final short mcMMOMiningLevelDivideAmount;
@@ -53,22 +46,6 @@ public class BlockValueListStorage {
 		mcMMOExcavationLevelDivideAmount = ExcavDivide;
 		mcMMOHerbalismLevelBonusAmount = HerbBonus;
 		mcMMOHerbalismLevelDivideAmount = HerbDivide;
-	}
-
-	public void writeLock() {
-		write.lock();
-	}
-
-	public void readLock() {
-		read.lock();
-	}
-
-	public void writeUnlock() {
-		write.unlock();
-	}
-
-	public void readUnlock() {
-		read.unlock();
 	}
 
 }

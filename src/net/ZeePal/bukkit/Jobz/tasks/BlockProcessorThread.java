@@ -44,22 +44,17 @@ public class BlockProcessorThread implements Runnable {
 	//Process block change data for money
 	@Override
 	public void run() {
-		blockValueListStorage.readLock();
-		try {
-			BlockValue foundBlock = null;
-			for (final BlockValue Block : blockValueListStorage.blockValues) {
-				if (blockID == Block.ID) {
-					if (Block.Data == -1 || blockData == Block.Data) {
-						foundBlock = Block;
-						break;
-					}
+		BlockValue foundBlock = null;
+		for (final BlockValue Block : blockValueListStorage.blockValues) {
+			if (blockID == Block.ID) {
+				if (Block.Data == -1 || blockData == Block.Data) {
+					foundBlock = Block;
+					break;
 				}
 			}
-			if (foundBlock != null) {
-				BufferedEconomyThread.add(player, (getValueModifier(foundBlock.Skill) * foundBlock.Value));
-			}
-		}finally{
-			blockValueListStorage.readUnlock();
+		}
+		if (foundBlock != null) {
+			BufferedEconomyThread.add(player, (getValueModifier(foundBlock.Skill) * foundBlock.Value));
 		}
 	}
 

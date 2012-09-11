@@ -18,7 +18,9 @@
 
 package net.ZeePal.bukkit.Jobz;
 
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.logging.Logger;
 
 import com.gmail.nossr50.datatypes.SkillType;
@@ -136,28 +138,28 @@ public class Jobz extends JavaPlugin {
 		woodcuttingConfig.loadConfig();
 		excavationConfig.loadConfig();
 		herbalismConfig.loadConfig();
-
-		blockBreakValueListStorage.writeLock();
-		try {
-			blockBreakValueListStorage.blockValues.addAll(miningConfig.getBlockBreakList());
-			blockBreakValueListStorage.blockValues.addAll(woodcuttingConfig.getBlockBreakList());
-			blockBreakValueListStorage.blockValues.addAll(excavationConfig.getBlockBreakList());
-			blockBreakValueListStorage.blockValues.addAll(herbalismConfig.getBlockBreakList());
-			Collections.sort(blockBreakValueListStorage.blockValues, BlockValue.Comparator);
-		} finally {
-			blockBreakValueListStorage.writeUnlock();
-		}
-
-		blockPlaceValueListStorage.writeLock();
-		try {
-			blockPlaceValueListStorage.blockValues.addAll(miningConfig.getBlockPlaceList());
-			blockPlaceValueListStorage.blockValues.addAll(woodcuttingConfig.getBlockPlaceList());
-			blockPlaceValueListStorage.blockValues.addAll(excavationConfig.getBlockPlaceList());
-			blockPlaceValueListStorage.blockValues.addAll(herbalismConfig.getBlockPlaceList());
-			Collections.sort(blockPlaceValueListStorage.blockValues, BlockValue.Comparator);
-		} finally {
-			blockPlaceValueListStorage.writeUnlock();
-		}
+		
+		final List<BlockValue> blockBreakValues = new ArrayList<BlockValue>();
+		
+		blockBreakValues.addAll(miningConfig.getBlockBreakList());
+		blockBreakValues.addAll(woodcuttingConfig.getBlockBreakList());
+		blockBreakValues.addAll(excavationConfig.getBlockBreakList());
+		blockBreakValues.addAll(herbalismConfig.getBlockBreakList());
+		Collections.sort(blockBreakValues, BlockValue.Comparator);
+		
+		final List<BlockValue> blockPlaceValues = new ArrayList<BlockValue>();
+		
+		blockPlaceValues.addAll(miningConfig.getBlockPlaceList());
+		blockPlaceValues.addAll(woodcuttingConfig.getBlockPlaceList());
+		blockPlaceValues.addAll(excavationConfig.getBlockPlaceList());
+		blockPlaceValues.addAll(herbalismConfig.getBlockPlaceList());
+		Collections.sort(blockPlaceValues, BlockValue.Comparator);
+		
+		blockBreakValueListStorage.blockValues.clear();
+		blockBreakValueListStorage.blockValues.addAll(blockBreakValues);
+		
+		blockPlaceValueListStorage.blockValues.clear();
+		blockPlaceValueListStorage.blockValues.addAll(blockPlaceValues);
 
 	}
 
