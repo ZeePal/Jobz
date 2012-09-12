@@ -30,7 +30,7 @@ import net.ZeePal.bukkit.Jobz.tasks.BlockProcessorThread;
 public class BlockPlaceListener implements Listener {
 
 	//Run block search in separate thread to leave the main thread to do more important stuff
-	@EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)
+	@EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
 	public void onBlockPlaceEvent(final BlockPlaceEvent event){
 		final Block block = event.getBlock();
 		Jobz.scheduler.scheduleAsyncDelayedTask(Jobz.plugin, new BlockProcessorThread(event.getPlayer().getName(), (short) block.getTypeId(), block.getData(), Jobz.blockPlaceValueListStorage));
