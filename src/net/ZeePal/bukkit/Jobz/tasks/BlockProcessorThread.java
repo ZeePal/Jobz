@@ -44,6 +44,10 @@ public class BlockProcessorThread implements Runnable {
 	//Process block change data for money
 	@Override
 	public void run() {
+		for (final String excludedPlayer : Jobz.excludedPlayerNames) {
+			if (excludedPlayer.equals(player))
+				return;
+		}
 		BlockValue foundBlock = null;
 		for (final BlockValue Block : blockValueListStorage.blockValues) {
 			if (blockID == Block.ID) {

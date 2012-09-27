@@ -28,3 +28,8 @@ mcMMO:
 EconomyThread:
   Init_Wait_Time: 1200
   Repeat_Every: 300
+ExcludedPlayers:
+- '[RedPower]'
+- '[IndustrialCraft]'
+- '[BuildCraft]'
+- '[ComputerCraft]'

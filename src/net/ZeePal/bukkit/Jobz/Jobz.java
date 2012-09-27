@@ -21,6 +21,7 @@ package net.ZeePal.bukkit.Jobz;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Logger;
 
 import com.gmail.nossr50.datatypes.SkillType;
@@ -49,6 +50,8 @@ public class Jobz extends JavaPlugin {
 	
 	public static BlockValueListStorage blockBreakValueListStorage = null;
 	public static BlockValueListStorage blockPlaceValueListStorage = null;
+	
+	public static CopyOnWriteArrayList<String> excludedPlayerNames = new CopyOnWriteArrayList<String>();
 	
 	private FileConfiguration config = null;
 
@@ -160,6 +163,9 @@ public class Jobz extends JavaPlugin {
 		
 		blockPlaceValueListStorage.blockValues.clear();
 		blockPlaceValueListStorage.blockValues.addAll(blockPlaceValues);
+		
+		excludedPlayerNames.clear();
+		excludedPlayerNames.addAll(config.getStringList("ExcludedPlayers"));
 
 	}
 
