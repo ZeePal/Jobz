@@ -40,6 +40,7 @@ import net.ZeePal.bukkit.Jobz.containers.BlockValueListStorage;
 import net.ZeePal.bukkit.Jobz.listeners.BlockBreakListener;
 import net.ZeePal.bukkit.Jobz.listeners.BlockPlaceListener;
 import net.ZeePal.bukkit.Jobz.tasks.BufferedEconomyThread;
+import net.ZeePal.bukkit.Jobz.tasks.BufferedWageThread;
 
 public class Jobz extends JavaPlugin {
 
@@ -52,6 +53,8 @@ public class Jobz extends JavaPlugin {
 	public static BlockValueListStorage blockPlaceValueListStorage = null;
 	
 	public static CopyOnWriteArrayList<String> excludedPlayerNames = new CopyOnWriteArrayList<String>();
+	
+	public static String wageMessage = "";
 	
 	private FileConfiguration config = null;
 
@@ -74,7 +77,8 @@ public class Jobz extends JavaPlugin {
 		loadConfigurations();
 
 		scheduler.scheduleAsyncRepeatingTask(this, new BufferedEconomyThread(),	config.getLong("EconomyThread.Init_Wait_Time"),	config.getLong("EconomyThread.Repeat_Every"));
-
+		scheduler.scheduleAsyncDelayedTask(this, new BufferedWageThread(config.getLong("WageThread.Repeat_Every_x_Minutes")), config.getLong("WageThread.Init_Wait_Time"));
+		
 		getServer().getPluginManager().registerEvents(new BlockBreakListener(),	this);
 		getServer().getPluginManager().registerEvents(new BlockPlaceListener(),	this);
 	}
@@ -166,6 +170,8 @@ public class Jobz extends JavaPlugin {
 		
 		excludedPlayerNames.clear();
 		excludedPlayerNames.addAll(config.getStringList("ExcludedPlayers"));
+		
+		wageMessage = config.getString("WageThread.Wage_Message").replace('&', '§');
 
 	}
 

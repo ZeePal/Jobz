@@ -28,6 +28,10 @@ mcMMO:
 EconomyThread:
   Init_Wait_Time: 1200
   Repeat_Every: 300
+WageThread:
+  Init_Wait_Time: 1200
+  Repeat_Every_x_Minutes: 60
+  Wage_Message: '&1Jobz &5PaySlip&r: You have earned &6${}&r in the last hour.'
 ExcludedPlayers:
 - '[RedPower]'
 - '[IndustrialCraft]'

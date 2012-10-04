@@ -4,163 +4,196 @@ Blocks:
     Data: -1
     Break_Value: 1
     Place_Value: -1
+    Cap: false
   Sandstone:
     ID: 24
     Data: -1
     Break_Value: 1
     Place_Value: -1
+    Cap: false
   Netherrack:
     ID: 87
     Data: -1
     Break_Value: 0.5
     Place_Value: -0.5
+    Cap: false
   Endstone:
     ID: 121
     Data: -1
     Break_Value: 1
     Place_Value: -1
+    Cap: false
   Coal:
     ID: 16
     Data: -1
     Break_Value: 2
     Place_Value: -2
+    Cap: false
   Iron:
     ID: 15
     Data: -1
     Break_Value: 4
     Place_Value: -4
+    Cap: false
   Gold:
     ID: 14
     Data: -1
     Break_Value: 4
     Place_Value: -4
+    Cap: false
   Redstone:
     ID: 73
     Data: -1
     Break_Value: 3
     Place_Value: -3
+    Cap: false
   Lapis_Lazuli:
     ID: 21
     Data: -1
     Break_Value: 10
     Place_Value: -10
+    Cap: false
   Diamond:
     ID: 56
     Data: -1
     Break_Value: 20
     Place_Value: -20
+    Cap: false
   Obsidian:
     ID: 49
     Data: -1
     Break_Value: 6
     Place_Value: -6
+    Cap: false
   Glowstone:
     ID: 89
     Data: -1
     Break_Value: 5
     Place_Value: -5
+    Cap: false
   Nether_Coal:
     ID: 135
     Data: 0
     Break_Value: 4
     Place_Value: -1
+    Cap: false
   Nether_Diamond:
     ID: 135
     Data: 1
     Break_Value: 40
     Place_Value: -40
+    Cap: false
   Nether_Gold:
     ID: 135
     Data: 2
     Break_Value: 8
     Place_Value: -8
+    Cap: false
   Nether_Iron:
     ID: 135
     Data: 3
     Break_Value: 8
     Place_Value: -8
+    Cap: false
   Nether_Lapis_Lazuli:
     ID: 135
     Data: 4
     Break_Value: 20
     Place_Value: -20
+    Cap: false
   Nether_Redstone:
     ID: 135
     Data: 5
     Break_Value: 6
     Place_Value: -6
+    Cap: false
   Nether_Copper:
     ID: 135
     Data: 6
     Break_Value: 5
     Place_Value: -5
+    Cap: false
   Nether_Tin:
     ID: 135
     Data: 7
     Break_Value: 6
     Place_Value: -6
+    Cap: false
   Marble:
     ID: 142
     Data: 0
     Break_Value: 1.5
     Place_Value: -1.5
+    Cap: false
   Basalt:
     ID: 142
     Data: 1
     Break_Value: 1.5
     Place_Value: -1.5
+    Cap: false
   Ruby:
     ID: 140
     Data: 0
     Break_Value: 5
     Place_Value: -5
+    Cap: false
   Emerald:
     ID: 140
     Data: 1
     Break_Value: 5
     Place_Value: -5
+    Cap: false
   Sapphire:
     ID: 140
     Data: 2
     Break_Value: 5
     Place_Value: -5
+    Cap: false
   Silver:
     ID: 140
     Data: 3
     Break_Value: 3
     Place_Value: -3
+    Cap: false
   Tin:
     ID: 140
     Data: 4
     Break_Value: 3
     Place_Value: -3
+    Cap: false
   Tin_2:
     ID: 248
     Data: -1
     Break_Value: 3
     Place_Value: -3
+    Cap: false
   Copper:
     ID: 140
     Data: 5
     Break_Value: 2.5
     Place_Value: -2.5
+    Cap: false
   Copper_2:
     ID: 249
     Data: -1
     Break_Value: 2.5
     Place_Value: -2.5
+    Cap: false
   Tungsten:
     ID: 140
     Data: 6
     Break_Value: 20
     Place_Value: -20
+    Cap: false
   Nikolite:
     ID: 140
     Data: 7
     Break_Value: 3
     Place_Value: -3
+    Cap: false
   Uranium:
     ID: 247
     Data: -1
     Break_Value: 7.5
     Place_Value: -7.5
+    Cap: false

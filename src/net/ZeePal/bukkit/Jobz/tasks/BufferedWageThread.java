@@ -20,37 +20,48 @@ package net.ZeePal.bukkit.Jobz.tasks;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import net.ZeePal.bukkit.Jobz.Jobz;
 import net.ZeePal.bukkit.Jobz.containers.BufferedPayment;
 
-public class BufferedEconomyThread implements Runnable {
+public class BufferedWageThread implements Runnable {
 
-	private static List<BufferedPayment> payments = new ArrayList<BufferedPayment>();
+	private static List<BufferedPayment> wages = new ArrayList<BufferedPayment>();
+	
+	private final long sleepTime;
+	
+	public BufferedWageThread(final long sleepLength) {
+		sleepTime = sleepLength;
+	}
 
-	//Add payments to buffer to be sent to the main thread in the near future
 	public static synchronized void add(final String player, final double pay) {
-		for (final BufferedPayment payment : payments) {
+		for (final BufferedPayment payment : wages) {
 			if (payment.player == player) {
 				payment.amount += pay;
 				return;
 			}
 		}
-		payments.add(new BufferedPayment(player, pay));
+		wages.add(new BufferedPayment(player, pay));
 	}
 
-	//Send payments to main thread for processing per person
 	@Override
-	public synchronized void run() {
-		for (final BufferedPayment payment : payments) {
-			if (payment.amount > 0) {
-				Jobz.scheduler.scheduleSyncDelayedTask(Jobz.plugin, new EconomyDepositTask(payment.player, payment.amount));
-				BufferedWageThread.add(payment.player, payment.amount);
-			}else if (payment.amount < 0) {
-				Jobz.scheduler.scheduleSyncDelayedTask(Jobz.plugin, new EconomyWithdrawTask(payment.player, -payment.amount));
-				BufferedWageThread.add(payment.player, payment.amount);
+	public void run() {
+		for (;;) {
+			loopWages();
+			try {
+				TimeUnit.MINUTES.sleep(sleepTime);
+			} catch (InterruptedException e) {
+				Jobz.logger.severe("Interrupt triggered while sleeping in the wage thread");
 			}
 		}
-		payments.clear();
+	}
+	
+	private synchronized void loopWages() {
+		for (final BufferedPayment payment : wages) {
+			if (payment.amount != 0)
+				Jobz.scheduler.scheduleSyncDelayedTask(Jobz.plugin, new WageAnnounceTask(payment.player, Jobz.wageMessage.replace("{}", Double.toString(payment.amount))));
+		}
+		wages.clear();
 	}
 }

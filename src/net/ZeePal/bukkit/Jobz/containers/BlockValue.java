@@ -41,12 +41,14 @@ public class BlockValue {
 	public final byte Data;
 	public final double Value;
 	public final SkillType Skill;
+	public final boolean Cap;
 
 	//Storage class for block's, their money value and skill for value modifying
-	public BlockValue(final short bId, final byte bData, final double bValue, final SkillType skillType) {
+	public BlockValue(final short bId, final byte bData, final double bValue, final SkillType skillType, final boolean bCap) {
 		ID = bId;
 		Data = bData;
 		Value = bValue;
 		Skill = skillType;
+		Cap = bCap;
 	}
 }

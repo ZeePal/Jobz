@@ -4,13 +4,16 @@ Blocks:
     Data: -1
     Break_Value: 3
     Place_Value: -3
+    Cap: false
   IC_Rubberwood:
     ID: 243
     Data: -1
     Break_Value: 3
     Place_Value: -3
+    Cap: false
   RP_Rubberwood:
     ID: 143
     Data: -1
     Break_Value: 3
     Place_Value: -3
+    Cap: false

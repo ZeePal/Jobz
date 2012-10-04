@@ -4,33 +4,40 @@ Blocks:
     Data: -1
     Break_Value: 1
     Place_Value: -1
+    Cap: false
   Dirt:
     ID: 3
     Data: -1
     Break_Value: 1
     Place_Value: -1
+    Cap: false
   Farmland:
     ID: 60
     Data: -1
     Break_Value: 1
     Place_Value: -1
+    Cap: false
   Sand:
     ID: 12
     Data: -1
     Break_Value: 1
     Place_Value: -1
+    Cap: false
   Gravel:
     ID: 13
     Data: -1
     Break_Value: 1
     Place_Value: -1
+    Cap: false
   Clay:
     ID: 82
     Data: -1
     Break_Value: 1
     Place_Value: -1
+    Cap: false
   Soul_Sand:
     ID: 88
     Data: -1
     Break_Value: 1
     Place_Value: -1
+    Cap: false

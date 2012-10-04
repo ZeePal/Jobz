@@ -58,7 +58,14 @@ public class BlockProcessorThread implements Runnable {
 			}
 		}
 		if (foundBlock != null) {
-			BufferedEconomyThread.add(player, (getValueModifier(foundBlock.Skill) * foundBlock.Value));
+			double payAmount;
+			double valueModifier = getValueModifier(foundBlock.Skill);
+			if (foundBlock.Cap == true && valueModifier > 1) {
+				payAmount = foundBlock.Value;
+			} else {
+				payAmount = valueModifier * foundBlock.Value;
+			}
+			BufferedEconomyThread.add(player, payAmount);
 		}
 	}
 

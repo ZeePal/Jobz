@@ -74,11 +74,11 @@ public class ConfigProcessor {
 
 			final double blockBreakValue = config.getDouble("Blocks." + Block + ".Break_Value");
 			if (blockBreakValue != 0)
-				blockBreakValues.add(new BlockValue(blockID, blockData, blockBreakValue, skill));
+				blockBreakValues.add(new BlockValue(blockID, blockData, blockBreakValue, skill, config.getBoolean("Blocks." + Block + ".Cap")));
 
 			final double blockPlaceValue = config.getDouble("Blocks." + Block + ".Place_Value");
 			if (blockPlaceValue != 0)
-				blockPlaceValues.add(new BlockValue(blockID, blockData, blockPlaceValue, skill));
+				blockPlaceValues.add(new BlockValue(blockID, blockData, blockPlaceValue, skill, config.getBoolean("Blocks." + Block + ".Cap")));
 		}
 
 	}
