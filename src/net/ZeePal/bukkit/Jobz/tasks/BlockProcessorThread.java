@@ -84,15 +84,19 @@ public class BlockProcessorThread implements Runnable {
 		}
 	}
 	
-	private int getLevel(SkillType skill) {
+	private int getLevel(final SkillType skill) {
 		Future<Integer> future = Jobz.scheduler.callSyncMethod(Jobz.plugin, new McMMOGetLevelTask(player, skill));
 		try {
 		    return future.get();
 		} catch (InterruptedException error) {
-		    Jobz.logger.severe("Interrupt triggered while getting mcMMO Skill Level");
+			try {
+				Jobz.logger.severe("Interrupt triggered while getting mcMMO Skill Level");
+			} catch (final NullPointerException npe) {}
 		} catch (ExecutionException error) {
-			Jobz.logger.severe("Callable task for mcMMO Skill Level threw an exception");
-		    error.getCause().printStackTrace();
+			try {
+				Jobz.logger.severe("Callable task for mcMMO Skill Level threw an exception");
+				error.getCause().printStackTrace();
+			} catch (final NullPointerException npe) {}
 		}
 		return 0;
 	}

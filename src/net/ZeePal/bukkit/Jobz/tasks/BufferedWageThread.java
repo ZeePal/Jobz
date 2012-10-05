@@ -51,8 +51,10 @@ public class BufferedWageThread implements Runnable {
 			loopWages();
 			try {
 				TimeUnit.MINUTES.sleep(sleepTime);
-			} catch (InterruptedException e) {
-				Jobz.logger.severe("Interrupt triggered while sleeping in the wage thread");
+			} catch (final InterruptedException e) {
+				try {
+					Jobz.logger.severe("Interrupt triggered while sleeping in the wage thread");
+				} catch (final NullPointerException npe) {}
 			}
 		}
 	}
@@ -60,7 +62,7 @@ public class BufferedWageThread implements Runnable {
 	private synchronized void loopWages() {
 		for (final BufferedPayment payment : wages) {
 			if (payment.amount != 0)
-				Jobz.scheduler.scheduleSyncDelayedTask(Jobz.plugin, new WageAnnounceTask(payment.player, Jobz.wageMessage.replace("{}", Double.toString(payment.amount))));
+				Jobz.scheduler.scheduleSyncDelayedTask(Jobz.plugin, new WageAnnounceTask(payment.player, Jobz.wageMessage.replace("{}", String.format("%.2f", payment.amount))));
 		}
 		wages.clear();
 	}
